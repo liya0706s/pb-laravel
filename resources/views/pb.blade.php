@@ -1,1 +1,1 @@
-ProgressBar
+@extends('layouts.app')
