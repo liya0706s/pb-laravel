@@ -1,4 +1,4 @@
-<header>
+{{-- <header>
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-list-item"><a href="/bootstrap3/">Bootstrap3 範例</a></li>
@@ -10,4 +10,4 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
     </nav>
-  </header>
+  </header> --}}
