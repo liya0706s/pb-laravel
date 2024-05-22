@@ -4,7 +4,7 @@
     <title>進度條 Laravel 課程範例</title>
     @include('layouts.meta')
     @include('layouts.css')
-    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body>
