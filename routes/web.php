@@ -12,11 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\PageController;
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/pb', function () {
-    return view('pb');
-});
+Route::get('/pb', [PageController::class, 'pb']);
