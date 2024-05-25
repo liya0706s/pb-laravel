@@ -11,6 +11,23 @@ class ProductController extends Controller
         // order => 訂單
         // product => 商品
         // prefix => 前綴
-        return view('product.show');
+
+        $products = [
+            [
+                "image" => asset('images/snoopy.jpg')
+            ],
+            [
+                "image" => asset('images/lucy.jpg')
+
+            ]
+        ];
+
+        $product= $products[0];
+
+        var_dump($product);
+
+        return view('product.show', [
+            "product" => $product
+    ]);
     }
 }
