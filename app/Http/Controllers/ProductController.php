@@ -22,7 +22,7 @@ class ProductController extends Controller
             ]
         ];
 
-        $product= $products[0];
+        $product= $products[1];
 
         var_dump($product);
 
