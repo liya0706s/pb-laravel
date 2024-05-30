@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
@@ -38,9 +39,20 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+
+        $diskName= "public";
+        $name=$request->file('product_image')->getClientOriginalName();
+        $path=$request->file('product_image')->storeAs(
+            'products',
+            $name,
+            $diskName
+        );
+        $url=Storage::disk($diskName)->url($path);
+
         DB::table('products')->insert([
-            'name' => 'Product 1',
-            'price' => 100
+            'name' => $request->input('product_name'),
+            'price' => $request->input('product_price'),
+            'image_url' => $url
         ]);
 
         return redirect()->route('products.index');
